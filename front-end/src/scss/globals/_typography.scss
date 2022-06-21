@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Franklin:ital,wght@0,200;0,400;0,700;1,400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Neuton:wght@300;400;700&family=Overpass:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap");
 :root {
-  --title-font-stack: "Caudex", serif;
-  --primary-font-stack: "Libre Franklin", sans-serif;
+  --title-font-stack: "Neuton", serif;
+  --primary-font-stack: "Overpass", sans-serif;
+  --secondary-font-stack: "Indie Flower", cursive;
 
   --step--2: clamp(0.91rem, calc(0.9rem + 0.07vw), 0.96rem);
   --step--1: clamp(1.09rem, calc(1.06rem + 0.15vw), 1.2rem);
