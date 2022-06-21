@@ -1,0 +1,25 @@
+@use "../utils" as u;
+
+.container {
+  width: min(100% - 32px, 1440px);
+  max-width: 1440px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 2rem;
+
+  > * {
+    grid-column: col-start / span 12;
+  }
+
+  // min width queries
+
+  @include u.breakpoint-min(med) {
+  }
+
+  @include u.breakpoint-min(lg) {
+  }
+
+  @include u.breakpoint-min(xl) {
+  }
+}
