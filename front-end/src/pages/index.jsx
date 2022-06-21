@@ -1,8 +1,9 @@
 import React from "react";
+import {FaPaw} from 'react-icons/fa'
 
 const IndexPage = () => (
     <>
-      <p>For The Love Of Dog</p>
+      <button className="button__blue"><FaPaw/>Read More</button>
     </>
 );
 

@@ -1,0 +1,50 @@
+.button__green {
+  font-size: var(--step--1);
+  font-weight: 200;
+  padding: 1rem 3rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 0.1rem;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  font-family: var(--secondary-font-stack);
+
+  &:after {
+    content: "";
+    background-color: var(--btn-color-one);
+    border-radius: 0.1rem;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 0.5rem;
+    left: 0.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.button__blue {
+  display: flex;
+  font-size: var(--step--2);
+  font-family: var(--secondary-font-stack);
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 1.85rem;
+  border: none;
+  background-color: var(--btn-color-two);
+  box-shadow: 3px 3px 12px var(--color-primary);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: none;
+    background-color: var(--btn-color-variant);
+    transform: scale(95%);
+  }
+}
