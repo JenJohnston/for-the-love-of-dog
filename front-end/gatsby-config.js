@@ -4,7 +4,7 @@ const sanityConfig = require("./sanity-config");
 
 module.exports = {
   siteMetadata: {
-    title: `front-end`,
+    title: `For The Love Of Dog`,
     siteUrl: `https://www.yourdomain.tld`,
     description: `site description goes here`,
   },

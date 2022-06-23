@@ -1,0 +1,63 @@
+@use "../utils" as u;
+
+// Hero Section
+
+.hero__section {
+  position: relative;
+  overflow-x: hidden;
+
+  .hero__Background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  .hero__content {
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include u.breakpoint-min(med) {
+      margin-left: 0;
+    }
+
+    .hero__logo {
+      position: fixed;
+      top: 20%;
+    }
+
+    .webgl {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      width: 100vw;
+
+      @include u.breakpoint-min(med) {
+        top: -15%;
+        left: 30%;
+        transform: translateX(0);
+      }
+
+      @include u.breakpoint-min(lg) {
+        top: 40%;
+        left: 36%;
+      }
+    }
+  }
+}
+
+// Acknoledgement
+
+.land {
+  &__header {
+    .land__img {
+      width: 10rem;
+    }
+  }
+}

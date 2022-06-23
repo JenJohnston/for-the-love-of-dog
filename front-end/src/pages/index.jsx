@@ -1,9 +1,18 @@
 import React from "react";
-import {FaPaw} from 'react-icons/fa'
+import Seo from "../components/SEO";
+
+import HeroSection from "../components/landingPage/HeroSection";
+import LandAcknowledgement from "../components/landingPage/LandAcknowledgement";
+
+
+
 
 const IndexPage = () => (
     <>
-      <button className="button__blue"><FaPaw/>Read More</button>
+      <Seo title="Home"/>
+      <HeroSection/>
+      <LandAcknowledgement/>
+      
     </>
 );
 
