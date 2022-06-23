@@ -1,0 +1,25 @@
+.footer {
+  position: relative;
+
+  &__background {
+    width: 100vw;
+    z-index: 1;
+
+    .bezier__curve {
+      transform: scaleY(1) scaleX(-1);
+      margin-bottom: -1px;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 10rem;
+    z-index: 2;
+
+    .footer__logoContainer {
+      max-width: 20rem;
+      margin: 0 auto;
+      margin-left: 1rem;
+    }
+  }
+}

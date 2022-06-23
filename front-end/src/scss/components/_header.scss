@@ -1,0 +1,122 @@
+@use "../utils" as u;
+
+// header logo
+
+.header {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logoContainer {
+      max-width: 8rem;
+      margin-top: 1rem;
+    }
+
+    .mobileNav__toggle {
+      background: transparent;
+      color: var(--color-primary);
+      z-index: 120;
+      font-size: 2rem;
+      aspect-ratio: 1;
+
+      border: none;
+    }
+
+    .navbar {
+      backdrop-filter: blur(5px);
+      padding: min(20vh, 10rem) 1.35rem;
+
+      position: fixed;
+      inset: 0 0 4rem 10rem;
+      transform: translateX(100%);
+      transition: all 0.6s ease-in-out;
+      z-index: 100;
+
+      .navmenu {
+        z-index: 110;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .searchIcon {
+          font-size: 1.85rem;
+          margin-inline: auto;
+          color: var(--color-primary);
+          cursor: pointer;
+        }
+
+        .nav__item {
+          margin-inline: auto;
+          background-color: var(--background-secondary);
+          box-shadow: 2px 2px 8px var(--color-primary);
+          padding: 0.65rem 1.65rem;
+          border-radius: 0.85rem;
+          transform: perspective(20rem) rotateY(45deg);
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            transform: rotateY(0);
+            background-color: transparent;
+            box-shadow: none;
+          }
+
+          .menu__link {
+            font-size: 1.125rem;
+            color: var(--background-color);
+            text-decoration: none;
+            font-weight: 400;
+            padding: 0.35rem 0;
+            text-shadow: 2px 2px 3px var(--color-primary);
+            transition: all 0.3s ease-in-out;
+
+            .navID {
+              display: none;
+            }
+
+            &:hover {
+              color: var(--background-variant);
+            }
+          }
+        }
+      }
+    }
+
+    .shownav {
+      transform: translateX(0%);
+    }
+  }
+
+  @include u.breakpoint-min(lg) {
+    .container {
+      .mobileNav__toggle {
+        display: none;
+      }
+
+      .navbar {
+        transform: translateX(0%);
+        padding: 0;
+        position: static;
+        max-width: fit-content;
+
+        .navmenu {
+          flex-direction: row;
+          align-items: center;
+          gap: 0;
+
+          .searchIcon {
+            margin-right: 1rem;
+          }
+
+          .nav__item {
+            margin-right: -1rem;
+            .menu__link:hover {
+              color: var(--color-primary);
+              text-shadow: 2px 2px 2px var(--background-secondary);
+            }
+          }
+        }
+      }
+    }
+  }
+}

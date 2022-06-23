@@ -79,6 +79,23 @@ img:not([alt]) {
   filter: blur(10px);
 }
 
+/* Hiding the scrollbar */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Screen Readers and accessability */
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  display: none;
+}
+
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
