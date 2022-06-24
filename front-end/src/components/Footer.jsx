@@ -1,6 +1,14 @@
+//dependencies
+
 import React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
+
+// icons
+
+import { FaPhoneAlt } from 'react-icons/fa'
+import { IoMail } from 'react-icons/io5'
+import {BiCopyright} from 'react-icons/bi'
 
 export default function Footer() {
     
@@ -23,8 +31,30 @@ export default function Footer() {
                             />
                         </Link>
                 </div>
+                <div className="icon__container">
+                    
+                    <Link to="tel:7801234567" className='footer__icon'>
+                        <FaPhoneAlt/>
+                        <span>{`(780)123-4567`}</span>
+                    </Link>
+                    <Link to="mailto:example@email.com" className='footer__icon'>
+                        <IoMail/>
+                        <span>example@email.com</span>
+                    </Link>
+                </div>
+
+                {/* Social Media Icons Go Here */}
+
+                <div className="footnotes">
+                    <div className='copywrite'><BiCopyright className='copyicon'/><p> 2022 For The Love Of Dog. All Rights Reserved</p></div>
+                    <p>Developed By <Link to="https://jennifer-johnston.netlify.app/" target="_blank">Illure | Design</Link></p>
+                    <p>Schnauzer Model generously provided by <Link to="https://sketchfab.com/Nyilonelycompany" target="_blank">Nyilonelycompany</Link></p>
+                </div>
+
             </div>
+
             
+
         </footer>
     )
 }

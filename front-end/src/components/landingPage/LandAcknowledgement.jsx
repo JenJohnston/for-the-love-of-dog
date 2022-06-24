@@ -8,7 +8,12 @@ export default function LandAcknowledgement() {
         <section className='land container'>
             <div className="land__header">
                 <h2>Land Acknowledgement</h2>
-                
+                <StaticImage
+                    className='land__img'
+                    src="../../images/landscape-painting.png"
+                    alt="logo image for for the love of dog"
+                    
+                />
             </div>
             <div className="land__content">
             <p>For the Love of dog acknowledges we operate on Treaty 6 Territory. We acknowledge this land as the traditional territories of many First Nations such as the Nehiyaw, Denesuliné, Nakota Sioux, Anishinaabe, and Niitsitapi, and is the traditional homeland of the Metis.</p>
