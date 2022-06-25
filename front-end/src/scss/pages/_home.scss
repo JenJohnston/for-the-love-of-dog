@@ -55,9 +55,141 @@
 // Acknoledgement
 
 .land {
+  max-width: 40rem;
+  margin-bottom: 4rem;
   &__header {
+    position: relative;
+    margin-bottom: 2rem;
+
     .land__img {
-      width: 10rem;
+      position: absolute;
+      width: 12rem;
+      left: 50%;
+      top: -40%;
+      transform: translateX(-50%);
+      opacity: 0.2;
     }
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+// About Section
+
+.about {
+  margin-bottom: 4rem;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    p {
+      font-weight: 200;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin-top: -1.35rem;
+    }
+  }
+
+  .img__container {
+    background-color: var(--img-background);
+    padding: 0.65rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.15rem;
+    box-shadow: 3px 3px 8px var(--color-primary);
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    max-width: 40rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.35rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    p {
+      font-size: var(--step-1);
+      margin-right: -3rem;
+      margin-top: 1rem;
+      font-family: var(--secondary-font-stack);
+    }
+  }
+
+  &__icon {
+    font-size: 6rem;
+    transform: rotate(-45deg);
+    opacity: 0.3;
+  }
+}
+
+// services section
+
+.services {
+  margin-bottom: 4rem;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    p {
+      font-weight: 200;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin-top: -1.35rem;
+    }
+  }
+
+  .img__container {
+    background-color: var(--img-background);
+    padding: 0.65rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.15rem;
+    box-shadow: 3px 3px 8px var(--color-primary);
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    max-width: 40rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.35rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    p {
+      font-size: var(--step-1);
+      margin-left: -3rem;
+      margin-top: 1rem;
+      font-family: var(--secondary-font-stack);
+    }
+  }
+
+  &__icon {
+    font-size: 6rem;
+    transform: rotate(45deg);
+    opacity: 0.3;
   }
 }

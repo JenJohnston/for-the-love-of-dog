@@ -1,9 +1,18 @@
+@use "../utils" as u;
+
 .footer {
   position: relative;
+  display: grid;
+  width: 100vw;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 
   &__background {
     width: 100vw;
     z-index: 1;
+    grid-column: 1;
+    grid-row: 1;
 
     .bezier__curve {
       transform: scaleY(1) scaleX(-1);
@@ -11,20 +20,28 @@
     }
 
     .hero_rectangle {
-      height: 60vh;
+      height: 80vh;
+
+      @include u.breakpoint-min(med) {
+        height: 48vh;
+      }
+
+      @include u.breakpoint-min(lg) {
+        height: 38vh;
+      }
     }
   }
 
   &__content {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
+    grid-column: 1;
+    grid-row: 1;
     z-index: 2;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: end;
+    margin-bottom: 2rem;
     gap: 2rem;
 
     .footer__logoContainer {
@@ -32,11 +49,24 @@
     }
 
     .icon__container {
+      .icon__links {
+        margin-bottom: 2rem;
+      }
+
       .footer__icon {
         display: flex;
         align-items: center;
         gap: var(--space-xs);
         font-size: var(--step-0);
+      }
+    }
+
+    .media__links {
+      display: flex;
+      gap: var(--space-s);
+
+      .media__link {
+        font-size: var(--step-1);
       }
     }
 
@@ -51,6 +81,46 @@
 
         .copyicon {
           margin-right: -1rem;
+        }
+      }
+
+      a {
+        font-weight: 700;
+      }
+    }
+
+    @include u.breakpoint-min(med) {
+      width: min(100% - 32px, 1440px);
+      max-width: 1440px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: repeat(12, [col-start] 1fr);
+
+      .footer__logoContainer {
+        width: 100%;
+        grid-column: col-start / span 5;
+      }
+
+      .icon__container {
+        grid-column: 7 / span 5;
+        align-self: start;
+        justify-self: end;
+      }
+
+      .footnotes {
+        align-items: flex-start;
+        gap: 0.35rem;
+
+        .copywrite {
+          margin-left: 0;
+          .copyicon {
+            margin-right: 0;
+          }
+        }
+
+        @include u.breakpoint-min(lg) {
+          flex-direction: row;
+          justify-content: space-between;
         }
       }
     }
