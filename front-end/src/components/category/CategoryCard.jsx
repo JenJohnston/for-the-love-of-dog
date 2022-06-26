@@ -8,17 +8,20 @@ export default function CategoryCard({title, description, slug, image}) {
     
 
     return (
-        <aside className='categoryCard'>
-            <div className="categoryCard__background">
+        <aside className='card'>
+            <div className="card__background">
                 <GatsbyImage
                     className='card__img'
                     image={image.imageData}
                     alt={image.altText}
                 />
+                <div className="card__overlay">
+                    
+                </div>
             </div>
-            <div className="categoryCard__content">
+            <div className="card__content">
                 <h2>{title}</h2>
-                <div className="category__description">
+                <div className="card__description">
                     <HandlePortableText value={description}/>
                 </div>
             </div>

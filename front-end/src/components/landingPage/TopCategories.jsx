@@ -41,8 +41,8 @@ export default function TopCategories() {
                 <CategoryCards categories={topCategories}/>
             </div>
             <Link to="/categories" className='topCategories__link'>
-                <p>View Our Categories</p>
                 <IoMdPaw className="topCategories__icon"/>
+                <p>View Our Categories</p>
             </Link>
         </section>
     )

@@ -287,6 +287,8 @@
 // blogs section
 
 .featuredBlogs {
+  margin-bottom: 4rem;
+
   &__header {
     text-align: center;
     margin-bottom: 4rem;
@@ -313,6 +315,39 @@
   &__icon {
     font-size: 6rem;
     transform: rotate(-45deg);
+    opacity: 0.3;
+  }
+}
+
+// categories section
+
+.topCategories {
+  &__header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    p {
+      font-size: var(--step-1);
+      margin-left: -3rem;
+      margin-top: 1rem;
+      font-family: var(--secondary-font-stack);
+    }
+  }
+
+  &__icon {
+    font-size: 6rem;
+    transform: rotate(45deg);
     opacity: 0.3;
   }
 }
