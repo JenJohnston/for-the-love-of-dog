@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "love-of-dog"
-  },
   "api": {
     "projectId": "rwxml4g5",
     "dataset": "production"
+  },
+  "project": {
+    "name": "love-of-dog"
   },
   "plugins": [
     "@sanity/base",
@@ -24,6 +24,10 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./components/Sidebar.js"
     }
   ]
 }

@@ -26,7 +26,7 @@ export default function Footer() {
                         <Link to='/' className='footer__link'>
                             <StaticImage
                                 className='footer__logo'
-                                src="../../images/fttd-logo-dk.png"
+                                src="../images/fttd-logo-dk.png"
                                 alt="logo image for for the love of dog"
                                 
                             />
@@ -34,21 +34,21 @@ export default function Footer() {
                 </div>
                 <div className="icon__container">
                     <div className="icon__links">
-                        <Link to="tel:7801234567" className='footer__icon'>
+                        <a href="tel:7801234567" className='footer__icon'>
                             <FaPhoneAlt/>
                             <span>{`(780)123-4567`}</span>
-                        </Link>
-                        <Link to="mailto:example@email.com" className='footer__icon'>
+                        </a>
+                        <a href="mailto:example@email.com" className='footer__icon'>
                             <IoMail/>
                             <span>example@email.com</span>
-                        </Link>
+                        </a>
                     </div>
                     <FooterMedia/>
                 </div>
                 <div className="footnotes">
                     <div className='copywrite'><BiCopyright className='copyicon'/><p> 2022 For The Love Of Dog. All Rights Reserved</p></div>
-                    <p>Developed By <Link to="https://jennifer-johnston.netlify.app/" target="_blank">Illure | Design</Link></p>
-                    <p>Schnauzer Model generously provided by <Link to="https://sketchfab.com/Nyilonelycompany" target="_blank">Nyilonelycompany</Link></p>
+                    <p>Developed By <a href="https://jennifer-johnston.netlify.app/" target="_blank" rel="noreferrer">Illure | Design</a></p>
+                    <p>Schnauzer Model generously provided by <a href="https://sketchfab.com/Nyilonelycompany" target="_blank" rel="noreferrer">Nyilonelycompany</a></p>
                 </div>
 
             </div>

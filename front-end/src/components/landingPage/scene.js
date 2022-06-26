@@ -2,7 +2,6 @@ import React from 'react'
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 export default class Scene extends React.Component {
     componentDidMount() {
@@ -106,7 +105,7 @@ export default class Scene extends React.Component {
             child.receiveShadow = true;
           }
         });
-        console.log(gltf.scene);
+        
         scene.add(gltf.scene);
       });
 
@@ -139,8 +138,6 @@ export default class Scene extends React.Component {
         width: window.innerWidth,
         height: 600,
       };
-
-      console.log(sizes)
 
       window.addEventListener("resize", () => {
         // Update sizes

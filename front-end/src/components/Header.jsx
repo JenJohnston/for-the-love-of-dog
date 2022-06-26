@@ -39,7 +39,7 @@ export default function Header() {
                     <Link to='/' className='header__link'>
                         <StaticImage
                             className='header__logo'
-                            src="../../images/fttd-logo-dk.png"
+                            src="../images/fttd-logo-dk.png"
                             alt="logo image for for the love of dog"
                             
                         />

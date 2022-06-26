@@ -60,19 +60,27 @@ export default {
       type: "richText",
       description: "All of the main content for your blog post goes here",
     },
+    {
+      title:'numLikes',
+      name: 'numLikes',
+      type: 'number',
+      readOnly: true,
+      initialValue: 0,
+
+    },
   ],
   preview: {
     select: {
       image: "coverImage",
       title: "title",
-      publishedAt: "publishedAt",
+      publishedOn: "publishedOn",
     },
-    prepare({ image, title, publishedAt }) {
+    prepare({ image, title, publishedOn }) {
       return {
         title,
         media: image,
-        subtitle: publishedAt
-          ? format(new Date(publishedAt), "p, dd/MM/yyy")
+        subtitle: publishedOn
+          ? format(new Date(publishedOn), "p, dd/MM/yyy")
           : "",
       };
     },

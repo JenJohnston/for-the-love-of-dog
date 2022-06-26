@@ -1,0 +1,19 @@
+{
+  "name": "love-of-dog",
+  "version": "1.0.0",
+  "description": "home page for the love of dog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
