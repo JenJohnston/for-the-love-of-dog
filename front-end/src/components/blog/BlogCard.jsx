@@ -21,7 +21,7 @@ export default function BlogCard({title, path, image, publishedOn, categories, e
                 <p className='card__categories'>
                     {categories.map((item, index) => (
                         <span key={item.slug.current}>
-                            <Link to={`/categories/${item.slug.current}`}>
+                            <Link className='card__category' to={`/categories/${item.slug.current}`}>
                                 {item.title}
                             </Link>
                             {index < categories.length - 1 ? ' | ' : ''}
