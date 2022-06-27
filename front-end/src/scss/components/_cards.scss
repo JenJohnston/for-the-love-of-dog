@@ -53,19 +53,20 @@
 // category cards
 
 .topCategories__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .card {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-
     max-width: 32rem;
-    aspect-ratio: 1 / 1;
 
     &__background {
       grid-row: 1;
       grid-column: 1;
       z-index: 1;
-      aspect-ratio: 1 / 1;
       width: 100%;
       position: relative;
     }
