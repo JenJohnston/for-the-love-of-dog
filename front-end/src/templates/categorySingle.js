@@ -1,6 +1,7 @@
 import { graphql } from "gatsby";
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
+import HandlePortableText from "../components/HandlePortableText.jsx";
 
 import SEO from "../components/SEO.jsx";
 import BlogCards from "../components/blog/BlogCards.jsx";
@@ -74,10 +75,11 @@ export default function CategorySingle({ data }) {
             />
             <div className='category__overlay'>
               <h1>{category.title}</h1>
+              <HandlePortableText value={category._rawDescription} />
             </div>
           </div>
         </div>
-        <div className='category__blogs container'>
+        <div className='featuredBlogs__cards container'>
           <BlogCards blogs={blogs} />
         </div>
       </section>

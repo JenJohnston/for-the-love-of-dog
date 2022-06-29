@@ -1,0 +1,31 @@
+.pagination {
+  max-width: 20rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+
+  &__wrapper {
+  }
+
+  &__icons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    a {
+      border-radius: 50%;
+      background-color: var(--color-primary-ol);
+      padding: 0.35rem;
+    }
+
+    p {
+      font-family: var(--secondary-font-stack);
+      text-transform: uppercase;
+    }
+  }
+
+  &__chevron {
+    width: 1.65rem;
+    height: 1.65rem;
+    color: var(--background-color);
+  }
+}

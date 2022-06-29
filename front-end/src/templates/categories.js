@@ -67,7 +67,7 @@ export default function Categories({ data, pageContext }) {
           </div>
         </div>
         <div className='categories__content'>
-          <aside>
+          <aside className='topCategories__cards container'>
             <CategoryCards categories={categories} />
           </aside>
           {numberOfPages > 1 && (

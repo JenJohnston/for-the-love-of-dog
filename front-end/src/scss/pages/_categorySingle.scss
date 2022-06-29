@@ -46,27 +46,25 @@
     grid-row: 1;
     grid-column: 1;
     z-index: 2;
+    padding: 1rem 2rem;
+    border-radius: 0.85rem;
     max-width: 46rem;
     justify-self: center;
     align-self: center;
-    padding: 2rem 0.5rem;
     color: var(--background-color);
     text-shadow: 1px 1px 4px var(--color-primary);
+    background-color: var(--color-primary-ol);
     backdrop-filter: blur(2px);
 
     h1 {
-      background-color: var(--color-primary-ol);
       padding: 1rem 2rem;
       border-radius: 0.85rem;
       font-size: var(--step-4);
     }
 
-    @include u.breakpoint-min(lg) {
-      padding: 4rem 0;
-    }
-
-    @include u.breakpoint-min(xl) {
-      padding: 6rem 0;
+    p {
+      text-align: center;
+      padding-bottom: 1rem;
     }
   }
 }
