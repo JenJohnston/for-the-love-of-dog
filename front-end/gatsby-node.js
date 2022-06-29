@@ -5,6 +5,8 @@ exports.createPages = async ({ graphql, actions}) => {
     const singleBlogTemplate = require.resolve('./src/templates/blogSingle.js')
     const singleCategoryTemplate = require.resolve('./src/templates/categorySingle.js')
     const categoryHomeTemplate = require.resolve('./src/templates/categories.js')
+    const singleServiceTemplate = require.resolve('./src/templates/serviceSingle.js')
+    const servicesHomeTemplate = require.resolve('./src/templates/services.js')
 
     const { createPage } = actions
     const result = await graphql(`
@@ -48,6 +50,7 @@ exports.createPages = async ({ graphql, actions}) => {
 
     const blogs = result.data.allSanityBlog.nodes
     const categories = result.data.allSanityCategory.nodes
+    const services = result.data.allSanityServices.nodes
 
     // single blogs pages
     blogs.forEach((blog) => {
@@ -66,7 +69,17 @@ exports.createPages = async ({ graphql, actions}) => {
           component: singleCategoryTemplate,
           context: { id: category.id }
         })
-      })
+    })
+
+    // single services pages
+
+    services.forEach((service) => {
+        createPage({
+          path: `/services/${service.slug.current}`,
+          component: singleServiceTemplate,
+          context: { id: service.id }
+        })
+    })
 
      // blog home page
 
@@ -91,6 +104,22 @@ exports.createPages = async ({ graphql, actions}) => {
         createPage({
             path: index === 0 ? '/categories' : `/categories/${index + 1}`,
             component: categoryHomeTemplate,
+            context: {
+            limit: postsPerPage,
+            offset: index * postsPerPage,
+            numberOfPages: totalCategoryPages,
+            currentPage: index + 1,
+            },
+        })
+     })
+
+     // services home page
+
+     const totalServicePages = Math.ceil(categories.length / postsPerPage)
+     Array.from({ length: totalServicePages}).forEach((_, index) => {
+        createPage({
+            path: index === 0 ? '/services' : `/services/${index + 1}`,
+            component: servicesHomeTemplate,
             context: {
             limit: postsPerPage,
             offset: index * postsPerPage,

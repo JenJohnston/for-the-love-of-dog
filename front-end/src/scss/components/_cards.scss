@@ -65,10 +65,126 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 4rem;
 
     .card {
-      max-width: 20rem;
-      height: fit-content;
+      max-width: 26rem;
+      margin-top: 0;
+    }
+  }
+}
+
+// blog feature card
+
+.blogs__featured {
+  margin-bottom: 4rem;
+
+  .card {
+    max-width: 40rem;
+    margin-inline: auto;
+    &__header {
+      border-bottom: 2px solid var(--color-primary);
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &__img {
+      background: url("/images/feature-blog-bg.jpg");
+      padding: 1rem;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 0.85rem;
+      box-shadow: 3px 3px 8px var(--color-primary);
+      margin-bottom: 1rem;
+
+      img {
+        padding: 1rem 0.75rem;
+        width: 95%;
+        aspect-ratio: 1 / 1;
+        margin-inline: auto;
+        border-radius: 1.85rem;
+      }
+    }
+
+    &__categories {
+      text-align: center;
+    }
+
+    &__title {
+      margin-bottom: 1rem;
+    }
+
+    &__date {
+      text-align: center;
+      font-weight: 200;
+      font-size: var(--step--2);
+    }
+  }
+
+  .button__blue {
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  @include u.breakpoint-min(xl) {
+    margin-bottom: 18rem;
+    display: flex;
+    align-items: center;
+
+    .card {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.25fr auto 0.15fr;
+
+      &__img {
+        max-width: 32rem;
+        grid-column: 1;
+        grid-row: 1 / span 3;
+        overflow: visible;
+
+        img {
+          margin-left: 6rem;
+          z-index: 2;
+          padding: 2rem 1.75rem;
+          border-radius: 2.85rem;
+        }
+      }
+
+      &__header {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 2rem;
+        max-width: 36rem;
+      }
+
+      &__categories {
+        text-align: left;
+      }
+
+      &__title {
+        text-align: left;
+      }
+
+      &__date {
+        text-align: left;
+      }
+
+      &__content {
+        grid-column: 2;
+        grid-row: 2;
+
+        max-width: 36rem;
+      }
+
+      .button__blue {
+        grid-column: 2;
+        grid-row: 3;
+        margin: 1rem 0;
+
+        float: left;
+      }
     }
   }
 }

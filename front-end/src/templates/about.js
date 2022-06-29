@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import React from "react";
-import SEO from "../components/Seo.jsx";
+import SEO from "../components/SEO.jsx";
 
-export default function Blogs({}) {
+export default function About() {
   return <>blogsHome</>;
 }

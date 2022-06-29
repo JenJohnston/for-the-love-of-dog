@@ -57,11 +57,13 @@ export default {
       price: "price",
       excerpt: "excerpt",
     },
-    prepare({ image, title, excerpt }) {
+    prepare({ image, title, excerpt, price, subtitle }) {
       return {
         title,
+        subtitle,
         media: image,
-        subtitle: excerpt,
+        excerpt,
+        price,
       };
     },
   },

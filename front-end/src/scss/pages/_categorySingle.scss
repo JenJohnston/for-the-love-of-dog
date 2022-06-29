@@ -1,0 +1,72 @@
+@use "../utils" as u;
+
+.category {
+  &__hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+
+  &__background {
+    grid-row: 1;
+    grid-column: 1;
+
+    .hero_rectangle {
+      height: 50vh;
+    }
+  }
+
+  &__header {
+    grid-row: 1;
+    grid-column: 1;
+    height: fit-content;
+    margin-bottom: var(--space-3xl);
+    align-self: flex-start;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+
+  &__image {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    height: 20rem;
+    aspect-ratio: 2 / 1;
+
+    @include u.breakpoint-min(xl) {
+      height: 24rem;
+    }
+  }
+
+  &__overlay {
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 2;
+    max-width: 46rem;
+    justify-self: center;
+    align-self: center;
+    padding: 2rem 0.5rem;
+    color: var(--background-color);
+    text-shadow: 1px 1px 4px var(--color-primary);
+    backdrop-filter: blur(2px);
+
+    h1 {
+      background-color: var(--color-primary-ol);
+      padding: 1rem 2rem;
+      border-radius: 0.85rem;
+      font-size: var(--step-4);
+    }
+
+    @include u.breakpoint-min(lg) {
+      padding: 4rem 0;
+    }
+
+    @include u.breakpoint-min(xl) {
+      padding: 6rem 0;
+    }
+  }
+}

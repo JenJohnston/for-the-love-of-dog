@@ -10,6 +10,7 @@ import blog from "./documents/blog.js";
 import category from "./documents/category";
 import author from "./documents/author.js";
 import featured from "./documents/featured.js";
+import blogFeatured from "./documents/blogFeatured.js";
 import services from "./documents/services.js";
 
 // object import
@@ -31,6 +32,7 @@ export default createSchema({
 
     featured,
     blog,
+    blogFeatured,
     author,
     category,
     services,
