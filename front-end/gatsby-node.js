@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions}) => {
     const categoryHomeTemplate = require.resolve('./src/templates/categories.js')
     const singleServiceTemplate = require.resolve('./src/templates/serviceSingle.js')
     const servicesHomeTemplate = require.resolve('./src/templates/services.js')
+    const aboutTemplate = require.resolve('./src/templates/about.js')
 
     const { createPage } = actions
     const result = await graphql(`
@@ -51,6 +52,7 @@ exports.createPages = async ({ graphql, actions}) => {
     const blogs = result.data.allSanityBlog.nodes
     const categories = result.data.allSanityCategory.nodes
     const services = result.data.allSanityServices.nodes
+    const about = result.data.allSanityAuthor.nodes
 
     // single blogs pages
     blogs.forEach((blog) => {
@@ -78,6 +80,16 @@ exports.createPages = async ({ graphql, actions}) => {
           path: `/services/${service.slug.current}`,
           component: singleServiceTemplate,
           context: { id: service.id }
+        })
+    })
+
+    // about page
+
+    about.forEach((author) => {
+        createPage({
+            path: `/about`,
+            component: aboutTemplate,
+            context: { id: author.id }
         })
     })
 
