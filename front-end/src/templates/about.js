@@ -4,6 +4,8 @@ import SEO from "../components/SEO.jsx";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { StaticImage } from "gatsby-plugin-image";
 
+import HandlePortableText from "../components/HandlePortableText.jsx";
+
 import { IoMdPaw } from "react-icons/io";
 
 export const authorQuery = graphql`
@@ -26,9 +28,9 @@ export default function About({ data }) {
   return (
     <>
       <SEO title='About' />
-      <section className='about'>
-        <div className='about__hero'>
-          <div className='about__background'>
+      <section className='aboutPage'>
+        <div className='aboutPage__hero'>
+          <div className='aboutPage__background'>
             <div className='hero_rectangle'></div>
             <svg
               className='bezier__curve'
@@ -42,27 +44,74 @@ export default function About({ data }) {
               ></path>
             </svg>
           </div>
-          <div className='about__header'>
-            <div className='about__overlay'>
+          <div className='aboutPage__header'>
+            <div className='aboutPage__overlay'>
               <h1>Let Me Say Hello</h1>
             </div>
             <GatsbyImage
               image={author.profileImage.asset.gatsbyImageData}
               alt={author.profileImage.alt}
-              className='about__image'
+              className='aboutPage__image'
             />
           </div>
         </div>
-        <div className='about__content container'>
-          <div className='about__subHeader'>
-            <IoMdPaw className='about__pawIcon' />
-            <div className='about__title'>
+        <div className='aboutPage__content container'>
+          <div className='aboutPage__subHeader'>
+            <IoMdPaw className='aboutPage__pawIcon' />
+            <div className='aboutPage__title'>
               <StaticImage
-                className='about__boneImg'
+                className='aboutPage__boneImg'
                 src='../images/dog-bone.png'
                 alt='logo image for for the love of dog'
               />
-              <h2 className='about__h2'>We Love Dogs</h2>
+              <h2 className='aboutPage__h2'>We Love Dogs</h2>
+            </div>
+          </div>
+          <div className='aboutPage__sectionOne'>
+            <StaticImage
+              className='aboutPage__sectionOneImg'
+              src='../images/about-one.jpg'
+              alt='logo image for for the love of dog'
+            />
+            <div>
+              <HandlePortableText value={author._rawBio} />
+            </div>
+          </div>
+          <div className='aboutPage__subHeader'>
+            <IoMdPaw className='aboutPage__pawIcon' />
+            <div className='aboutPage__title'>
+              <StaticImage
+                className='aboutPage__boneImg'
+                src='../images/dog-bone.png'
+                alt='logo image for for the love of dog'
+              />
+              <h2 className='aboutPage__h2'>...like really love them</h2>
+            </div>
+          </div>
+          <div className='aboutPage__sectionTwo'>
+            <div className='aboutPage__gallery'>
+              <StaticImage
+                className='aboutPage__sectionOneImg'
+                src='../images/about-two.jpg'
+                alt='logo image for for the love of dog'
+              />
+              <StaticImage
+                className='aboutPage__sectionOneImg'
+                src='../images/about-three.jpg'
+                alt='logo image for for the love of dog'
+              />
+              <StaticImage
+                className='aboutPage__sectionOneImg'
+                src='../images/about-four.jpg'
+                alt='logo image for for the love of dog'
+              />
+            </div>
+            <div>
+              <p>
+                For the Love of Dog goes beyond traditional dog training and
+                behaviour modification, using up-to-date scientific research,
+                empathy and kindness, to help you and your dog thrive together.
+              </p>
             </div>
           </div>
         </div>

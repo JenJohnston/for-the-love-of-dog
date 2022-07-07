@@ -1,6 +1,6 @@
 @use "../utils" as u;
 
-.about {
+.aboutPage {
   &__hero {
     display: grid;
     grid-template-columns: 1fr;
@@ -82,12 +82,16 @@
     margin: 0;
     padding: 0;
     margin-inline: auto;
+    margin-top: -4rem;
   }
 
   &__subHeader {
     display: flex;
     justify-content: center;
-    margin-bottom: 4rem;
+
+    @include u.breakpoint-min(med) {
+      margin-left: -4rem;
+    }
   }
 
   &__title {

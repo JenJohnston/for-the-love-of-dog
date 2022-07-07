@@ -8,8 +8,6 @@ import { FaPaw } from 'react-icons/fa'
 
 export default function BlogCard({title, path, image, publishedOn, categories, excerpt}) {
 
-    console.log(publishedOn)
-    
     return (
         <aside className='card'>
            <GatsbyImage
