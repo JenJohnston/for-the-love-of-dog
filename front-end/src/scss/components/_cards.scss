@@ -262,3 +262,150 @@
     }
   }
 }
+
+// services cards
+
+.servicesPage__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  .card {
+    max-width: 28rem;
+    background-color: var(--background-variant);
+    font-family: var(--primary-font-stack);
+    border-radius: 0.35rem;
+    box-shadow: 1px 1px 12px var(--color-primary);
+    &__img {
+      aspect-ratio: 1;
+      box-shadow: 3px 3px 8px var(--color-primary);
+      border-radius: 0.35rem;
+    }
+
+    &__content {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &__title,
+    &__subtitle {
+      font-family: var(--primary-font-stack);
+    }
+
+    &__title {
+      font-weight: 600;
+    }
+
+    &__subtitle {
+      font-weight: 200;
+      font-style: italic;
+      font-size: var(--step-0);
+    }
+
+    &__body {
+      p {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      span {
+        font-weight: 700;
+        font-size: var(--step-3);
+      }
+
+      ul {
+        margin: 0;
+        padding: 1rem;
+        margin-left: 4rem;
+        li {
+          margin-bottom: 0.35rem;
+        }
+      }
+    }
+
+    &__menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    &__contactLinks {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        color: var(--background-secondary);
+      }
+    }
+
+    &__icon {
+      width: 1.65rem;
+      height: 1.65rem;
+
+      transition: all 0.6 ease-in-out;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+
+    @include u.breakpoint-min(lg) {
+      max-width: 38rem;
+      min-height: 34rem;
+      display: grid;
+      grid-template-columns: 0.4fr 0.6fr;
+
+      &__img {
+        grid-column: 1;
+        aspect-ratio: 1 / 1.5;
+        margin-top: 4rem;
+        position: relative;
+        left: -20%;
+      }
+
+      &__content {
+        grid-column: 2;
+        margin-left: -2rem;
+        margin-top: 4rem;
+      }
+
+      &__title,
+      &__subtitle {
+        text-align: left;
+      }
+
+      &__body {
+        p {
+          justify-content: flex-start;
+          margin-bottom: 0.35rem;
+        }
+
+        ul {
+          margin-left: 0;
+          margin-bottom: 0.35rem;
+        }
+      }
+
+      &__menu {
+        grid-column: 2;
+        margin-left: -2rem;
+        max-width: 24rem;
+        height: fit-content;
+        position: relative;
+        bottom: 30%;
+      }
+    }
+  }
+
+  @include u.breakpoint-min(xl) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}

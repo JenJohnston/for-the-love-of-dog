@@ -1,6 +1,6 @@
 @use "../utils" as u;
 
-.categories {
+.servicesPage {
   &__hero {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,7 +20,7 @@
   &__header {
     grid-row: 1;
     grid-column: 1;
-    background-image: url("/images/categories-header.jpg");
+    background-image: url("/images/services-header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -52,5 +52,46 @@
     @include u.breakpoint-min(xl) {
       padding: 6rem 0;
     }
+  }
+
+  &__subHeader {
+    display: flex;
+    justify-content: center;
+    margin-top: -4rem;
+    margin-bottom: 8rem;
+    @include u.breakpoint-min(med) {
+      margin-left: -4rem;
+    }
+  }
+
+  &__title {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__pawIcon {
+    font-size: 8rem;
+    transform: rotate(135deg);
+    opacity: 0.35;
+    margin-right: -4rem;
+    margin-top: -2rem;
+  }
+
+  &__h2 {
+    font-family: var(--secondary-font-stack);
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+  }
+
+  &__boneImg {
+    max-width: 24rem;
+    opacity: 0.35;
+    grid-column: 1;
+    grid-row: 1;
+    margin-inline: auto;
   }
 }

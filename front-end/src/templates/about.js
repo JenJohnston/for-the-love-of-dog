@@ -73,7 +73,7 @@ export default function About({ data }) {
               src='../images/about-one.jpg'
               alt='logo image for for the love of dog'
             />
-            <div>
+            <div className='aboutPage__bio'>
               <HandlePortableText value={author._rawBio} />
             </div>
           </div>
@@ -91,17 +91,17 @@ export default function About({ data }) {
           <div className='aboutPage__sectionTwo'>
             <div className='aboutPage__gallery'>
               <StaticImage
-                className='aboutPage__sectionOneImg'
+                className='aboutPage__sectionTwoImg'
                 src='../images/about-two.jpg'
                 alt='logo image for for the love of dog'
               />
               <StaticImage
-                className='aboutPage__sectionOneImg'
+                className='aboutPage__sectionTwoImg'
                 src='../images/about-three.jpg'
                 alt='logo image for for the love of dog'
               />
               <StaticImage
-                className='aboutPage__sectionOneImg'
+                className='aboutPage__sectionTwoImg'
                 src='../images/about-four.jpg'
                 alt='logo image for for the love of dog'
               />

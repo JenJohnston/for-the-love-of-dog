@@ -88,7 +88,7 @@
   &__subHeader {
     display: flex;
     justify-content: center;
-
+    margin-bottom: 8rem;
     @include u.breakpoint-min(med) {
       margin-left: -4rem;
     }
@@ -123,5 +123,65 @@
     grid-column: 1;
     grid-row: 1;
     margin-inline: auto;
+  }
+
+  &__sectionOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 6rem;
+
+    @include u.breakpoint-min(xl) {
+      flex-direction: row;
+    }
+  }
+
+  &__sectionOneImg {
+    aspect-ratio: 1;
+    border-radius: 1.85rem;
+    max-width: 30rem;
+    box-shadow: 3px 3px 8px var(--color-primary);
+  }
+
+  &__bio {
+    max-width: 54rem;
+
+    p {
+      font-size: var(--step-0);
+    }
+  }
+
+  &__sectionTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      max-width: 60rem;
+      text-align: center;
+      font-size: var(--step-0);
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    @include u.breakpoint-min(med) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__sectionTwoImg {
+    max-width: 26rem;
+    border-radius: 1.85rem;
+    aspect-ratio: 1;
+    box-shadow: 3px 3px 8px var(--color-primary);
   }
 }
