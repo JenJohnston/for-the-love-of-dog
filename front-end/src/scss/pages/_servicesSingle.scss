@@ -1,6 +1,6 @@
 @use "../utils" as u;
 
-.servicesPage {
+.servicesSingle {
   &__hero {
     display: grid;
     grid-template-columns: 1fr;
@@ -36,25 +36,16 @@
 
   &__overlay {
     background-color: var(--color-primary-ol);
-    padding: 2rem 0.5rem;
+    padding: 4rem 0.5rem;
     color: var(--background-color);
     text-shadow: 1px 1px 4px var(--color-primary);
 
-    p {
-      text-align: center;
-      font-size: var(--step-0);
-      font-weight: 300;
-      max-width: 32rem;
-      margin: 0 auto;
-      margin-top: 1rem;
-    }
-
     @include u.breakpoint-min(lg) {
-      padding: 4rem 0;
+      padding: 6rem 0;
     }
 
     @include u.breakpoint-min(xl) {
-      padding: 6rem 0;
+      padding: 8rem 0;
     }
   }
 
