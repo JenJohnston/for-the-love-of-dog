@@ -121,4 +121,27 @@
       align-self: flex-start;
     }
   }
+
+  &__link {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+    bottom: 1%;
+
+    p {
+      font-size: var(--step-1);
+      margin-right: -3rem;
+      margin-top: 1rem;
+      font-family: var(--secondary-font-stack);
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    transform: rotate(-45deg);
+    opacity: 0.3;
+  }
 }

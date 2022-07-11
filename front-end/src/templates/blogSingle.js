@@ -9,6 +9,7 @@ import HandlePortableText from "../components/HandlePortableText.jsx";
 import { CgCalendarDates } from "react-icons/cg";
 import { BsPersonCircle } from "react-icons/bs";
 import { MdOutlineCategory } from "react-icons/md";
+import { IoMdPaw } from "react-icons/io";
 
 export const postQuery = graphql`
   query SingleBlogQuery($id: String!) {
@@ -99,6 +100,10 @@ export default function BlogsSingle({ data }) {
           <article className='blog__body'>
             <HandlePortableText value={blog._rawBody} />
           </article>
+          <Link to='/blogs' className='blog__link'>
+            <p>Return to Blogs</p>
+            <IoMdPaw className='blog__icon' />
+          </Link>
         </div>
       </section>
     </>
