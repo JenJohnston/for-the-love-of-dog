@@ -7,7 +7,7 @@ import { FaPhoneAlt } from 'react-icons/fa'
 import { IoMail } from 'react-icons/io5'
 import { FaPaw } from 'react-icons/fa'
 
-export default function ServiceCard({path, title, subtitle, excerpt, body, price, image}) {
+export default function ServiceCard({path, title, subtitle, excerpt, price, image}) {
     
 
     return (
@@ -25,7 +25,7 @@ export default function ServiceCard({path, title, subtitle, excerpt, body, price
               <div className="card__body">
                  <p>P$ <span>{price}</span></p>
                  <p>Features</p>
-                 <HandlePortableText value={body}/>
+                 <HandlePortableText value={excerpt}/>
               </div>
            </div>
            <div className="card__menu">

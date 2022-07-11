@@ -3,6 +3,11 @@ import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import SEO from "../components/SEO.jsx";
+import HandlePortableText from "../components/HandlePortableText.jsx";
+
+import { IoMdPaw } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 
 export const serviceQuery = graphql`
   query singleServiceQuery($id: String!) {
@@ -10,7 +15,8 @@ export const serviceQuery = graphql`
       title
       subtitle
       _id
-      _rawExcerpt
+      _rawBody
+      price
       coverImage {
         alt
         asset {
@@ -49,6 +55,39 @@ export default function ServicesSingle({ data }) {
             </div>
           </div>
         </div>
+        <article className='servicesSingle__content container'>
+          <h2>{service.title}</h2>
+          <GatsbyImage
+            image={service.coverImage.asset.gatsbyImageData}
+            alt={service.coverImage.alt}
+            className='servicesSingle__image'
+          />
+          <p className='servicesSingle__price'>
+            P$ <span>{service.price}</span>
+          </p>
+          <div className='servicesSingle__body'>
+            <HandlePortableText value={service._rawBody} />
+          </div>
+        </article>
+        <aside className='servicesSingle__menu'>
+          <h2>Book an appointment today!</h2>
+          <ul className='servicesSingle__links'>
+            <li>
+              <IoMdPaw className='servicesSingle__pawIcons' />
+              <a href='tel:7801234567'>
+                <FaPhoneAlt className='servicesSingle__linkIcon' />
+                <p>By Phone</p>
+              </a>
+            </li>
+            <li>
+              <IoMdPaw className='servicesSingle__pawIcons' />
+              <a href='mailto:example@email.com' className='footer__icon'>
+                <IoMail className='servicesSingle__linkIcon' />
+                <p>By Email</p>
+              </a>
+            </li>
+          </ul>
+        </aside>
       </section>
     </>
   );
