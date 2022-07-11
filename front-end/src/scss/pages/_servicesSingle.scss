@@ -91,8 +91,9 @@
   }
 
   &__content {
-    margin-top: -8rem;
-
+    @include u.breakpoint-min(xl) {
+      margin-top: -4rem;
+    }
     h2 {
       margin-bottom: 4rem;
       font-family: var(--primary-font-stack);

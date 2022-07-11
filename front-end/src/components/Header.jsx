@@ -13,6 +13,7 @@ import { CgClose } from 'react-icons/cg'
 //components
 
 import { navRouter } from '../constants/navrouter'
+import NavMedia from './NavMedia'
 
 export default function Header() {
     
@@ -51,6 +52,11 @@ export default function Header() {
                 </button>
                 <nav className={isNavOpen ? 'navbar shownav' : 'navbar'} id="navbar">
                     <ul className="navmenu" id="sitenav">
+                        {navRouter.map(navItem => (
+                            <li key={navItem.path} className="nav__item">
+                                <Link className='menu__link' to={navItem.path} onClick={handleNavClick}><span aria-hidden="true" className='navID'>{navItem.id}: </span>{navItem.title}</Link>
+                            </li>
+                        ))}
                         <li>
                             <div 
                                 className="searchIcon__wrapper" 
@@ -62,11 +68,9 @@ export default function Header() {
                                 <MdSearch className='searchIcon'></MdSearch>
                             </div>
                         </li>
-                        {navRouter.map(navItem => (
-                            <li key={navItem.path} className="nav__item">
-                                <Link className='menu__link' to={navItem.path} onClick={handleNavClick}><span aria-hidden="true" className='navID'>{navItem.id}: </span>{navItem.title}</Link>
-                            </li>
-                        ))}
+                        <li>
+                            <NavMedia/>
+                        </li>
                     </ul>
                 </nav>
             </div>
