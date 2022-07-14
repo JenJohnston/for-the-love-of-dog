@@ -1,7 +1,13 @@
+@use "../utils" as u;
+
 .hero_rectangle {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   background-color: var(--background-secondary);
+
+  @include u.breakpoint-min(med) {
+    height: 110vh;
+  }
 }
 
 .bezier__curve {
