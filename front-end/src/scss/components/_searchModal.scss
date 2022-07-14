@@ -1,0 +1,131 @@
+.modal {
+  width: 100vw;
+  height: 120em;
+  position: absolute;
+  top: 0;
+  z-index: 200;
+  background-color: var(--color-primary-ol);
+  backdrop-filter: blur(5px);
+
+  &__toggle {
+    background-color: transparent;
+    border: 1px solid var(--background-color);
+    border-radius: 50%;
+    color: var(--background-color);
+    margin: 1rem;
+    padding: 0.35rem;
+    font-size: 1.55rem;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    box-shadow: 2px 2px 4px var(--color-primary);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--btn-color-two);
+      border-color: var(--btn-color-two);
+      transform: scale(90%);
+    }
+  }
+
+  &__content {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: var(--background-color);
+    text-align: center;
+
+    h3 {
+      margin-bottom: 0.35rem;
+      font-family: var(--primary-font-stack);
+      text-shadow: 2px 2px 4px var(--color-primary);
+    }
+
+    p {
+      text-shadow: 2px 2px 4px var(--color-primary);
+      font-size: var(--step-0);
+    }
+
+    .search {
+      display: flex;
+      justify-content: center;
+
+      &__btn {
+        padding: 0.55rem;
+        border: none;
+        border-radius: 0.85rem 0 0 0.85rem;
+        background-color: var(--btn-color-two);
+        font-size: 1.55rem;
+      }
+
+      &__input {
+        padding-left: 0.5rem;
+        border: none;
+        border-radius: 0 0.85rem 0.85rem 0;
+        width: 100%;
+        max-width: 34rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin: 2rem 0;
+    text-shadow: 2px 2px 4px var(--color-primary);
+    color: var(--btn-color-variant);
+  }
+
+  &__result {
+    max-width: 34rem;
+
+    h3 {
+      font-family: var(--primary-font-stack);
+      font-size: var(--step-0);
+      text-shadow: 2px 2px 4px var(--color-primary);
+      text-align: left;
+      transition: all 0.3 ease-in-out;
+
+      &:hover {
+        color: var(--btn-color-two);
+      }
+    }
+
+    p {
+      text-align: left;
+      font-size: var(--step--1);
+      font-weight: 200;
+    }
+  }
+
+  &__blog {
+    display: flex;
+    gap: 0.55rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    max-width: 8rem;
+    border-radius: 0.35rem;
+    box-shadow: 2px 2px 4px var(--color-primary);
+    aspect-ratio: 2 / 1.3;
+  }
+
+  &__categories {
+    h3 {
+      text-align: center;
+    }
+  }
+
+  &__services {
+    display: flex;
+    gap: 0.55rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+}

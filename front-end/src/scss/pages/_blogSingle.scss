@@ -71,6 +71,7 @@
   }
 
   &__content {
+    margin-top: -2rem;
   }
 
   &__details {
@@ -95,7 +96,7 @@
   }
 
   &__body {
-    max-width: 60rem;
+    max-width: 48rem;
     margin: 0 auto;
     margin-top: 4rem;
     display: flex;
@@ -136,12 +137,5 @@
       margin-top: 1rem;
       font-family: var(--secondary-font-stack);
     }
-  }
-
-  &__icon {
-    width: 4rem;
-    height: 4rem;
-    transform: rotate(-45deg);
-    opacity: 0.3;
   }
 }

@@ -1,6 +1,6 @@
 //dependencies
 
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -14,10 +14,15 @@ import { CgClose } from 'react-icons/cg'
 
 import { navRouter } from '../constants/navrouter'
 import NavMedia from './NavMedia'
+import { ModalSearchContext } from '../context/ModalSearchContext'
 
 export default function Header() {
     
+
     const [ isNavOpen, setIsNavOpen ] = useState(false)
+    const { openModalSearch } = useContext(ModalSearchContext)
+
+    console.log(openModalSearch)
 
     const toggleNav = () => {
         setIsNavOpen(!isNavOpen)
@@ -30,7 +35,7 @@ export default function Header() {
     }
 
     const handleSearchModal = () => {
-       
+        openModalSearch();
     }
 
     return (
