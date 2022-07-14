@@ -34,7 +34,7 @@ export default function BlogCard({title, path, image, publishedOn, categories, e
            <div className='card__content'>
                <HandlePortableText value={excerpt}/>
            </div>
-           <Link to={`/blogs/${path}`} className='button__blue'><FaPaw/> Read More</Link>
+           <Link to={`/blogs/${path}`} className='button__blue'><FaPaw/> Read Blog</Link>
         </aside>
     )
 }
