@@ -23,7 +23,6 @@
       height: 80vh;
 
       @include u.breakpoint-min(med) {
-        height: 48vh;
       }
 
       @include u.breakpoint-min(lg) {

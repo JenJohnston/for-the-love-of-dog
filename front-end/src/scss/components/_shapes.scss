@@ -6,7 +6,7 @@
   background-color: var(--background-secondary);
 
   @include u.breakpoint-min(med) {
-    height: 110vh;
+    height: 120vh;
   }
 }
 
