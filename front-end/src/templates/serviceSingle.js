@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import SEO from "../components/SEO.jsx";
@@ -88,6 +88,12 @@ export default function ServicesSingle({ data }) {
             </li>
           </ul>
         </aside>
+        <div className='container'>
+          <Link to='/services' className='servicesSingle__link'>
+            <p>Return to Services</p>
+            <IoMdPaw className='servicesSingle__pawIcon' />
+          </Link>
+        </div>
       </section>
     </>
   );
