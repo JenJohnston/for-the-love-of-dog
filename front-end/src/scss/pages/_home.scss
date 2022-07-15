@@ -39,14 +39,11 @@
       margin-left: -0.5rem;
 
       @include u.breakpoint-min(med) {
-        top: 22%;
-        left: 30%;
-        transform: translateX(0);
+        top: 35%;
       }
 
       @include u.breakpoint-min(lg) {
         top: 40%;
-        left: 36%;
       }
     }
   }
