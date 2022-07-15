@@ -71,7 +71,7 @@ export default function Services({ data, pageContext }) {
           </div>
         </div>
         <div className='servicesPage__content container'>
-          <div className='servicesPage__subHeader'>
+          <div className='servicesPage__subHeader' data-aos='zoom-in'>
             <IoMdPaw className='servicesPage__pawIcon' />
             <div className='servicesPage__title'>
               <StaticImage

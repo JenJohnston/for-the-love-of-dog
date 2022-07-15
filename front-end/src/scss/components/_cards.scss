@@ -286,6 +286,11 @@
     font-family: var(--primary-font-stack);
     border-radius: 0.35rem;
     box-shadow: 1px 1px 12px var(--color-primary);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: transparent;
+    }
     &__img {
       aspect-ratio: 1;
       box-shadow: 3px 3px 8px var(--color-primary);

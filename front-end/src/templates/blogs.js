@@ -104,7 +104,7 @@ export default function Blogs({ data, pageContext }) {
           </div>
         </div>
         <div className='blogs__content container'>
-          <div className='blogs__subHeader'>
+          <div className='blogs__subHeader' data-aos='zoom-in'>
             <IoMdPaw className='blogs__pawIcon' />
             <div className='blogs__title'>
               <StaticImage

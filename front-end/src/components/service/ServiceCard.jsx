@@ -11,7 +11,11 @@ export default function ServiceCard({path, title, subtitle, excerpt, price, imag
     
 
     return (
-        <aside className='card'>
+        <aside className='card' 
+               data-aos="flip-up"
+               data-aos-easing="ease-in-sine"
+               data-aos-duration="500"
+        >
             <GatsbyImage
                 className='card__img'
                 image={image.imageData}

@@ -56,7 +56,7 @@ export default function About({ data }) {
           </div>
         </div>
         <div className='aboutPage__content container'>
-          <div className='aboutPage__subHeader'>
+          <div className='aboutPage__subHeader' data-aos='zoom-in'>
             <IoMdPaw className='aboutPage__pawIcon' />
             <div className='aboutPage__title'>
               <StaticImage
@@ -77,7 +77,7 @@ export default function About({ data }) {
               <HandlePortableText value={author._rawBio} />
             </div>
           </div>
-          <div className='aboutPage__subHeader'>
+          <div className='aboutPage__subHeader' data-aos='zoom-in'>
             <IoMdPaw className='aboutPage__pawIcon' />
             <div className='aboutPage__title'>
               <StaticImage
