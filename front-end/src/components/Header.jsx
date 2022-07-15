@@ -22,8 +22,6 @@ export default function Header() {
     const [ isNavOpen, setIsNavOpen ] = useState(false)
     const { openModalSearch } = useContext(ModalSearchContext)
 
-    console.log(openModalSearch)
-
     const toggleNav = () => {
         setIsNavOpen(!isNavOpen)
     }

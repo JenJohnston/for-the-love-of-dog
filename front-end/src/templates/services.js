@@ -38,7 +38,7 @@ export const ServicesQuery = graphql`
 
 export default function Services({ data, pageContext }) {
   const services = data.allSanityServices.nodes;
-  console.log(services);
+  const { currentPage, numberOfPages } = pageContext;
 
   return (
     <>
@@ -85,6 +85,13 @@ export default function Services({ data, pageContext }) {
           <div className='servicesPage__wrapper'>
             <ServiceCards services={services} />
           </div>
+          {numberOfPages > 1 && (
+            <Pagination
+              currentPage={currentPage}
+              numberOfPages={numberOfPages}
+              baseURL='/categories'
+            />
+          )}
         </div>
       </section>
     </>

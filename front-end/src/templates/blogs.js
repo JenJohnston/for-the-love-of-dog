@@ -132,6 +132,13 @@ export default function Blogs({ data, pageContext }) {
           <article className='featuredBlogs__cards'>
             <BlogCards blogs={blogs} />
           </article>
+          {numberOfPages > 1 && (
+            <Pagination
+              currentPage={currentPage}
+              numberOfPages={numberOfPages}
+              baseURL='/categories'
+            />
+          )}
         </div>
       </section>
     </>
