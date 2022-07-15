@@ -15,6 +15,10 @@
     border-radius: 1.35rem;
     padding-bottom: 1rem;
 
+    &:hover {
+      animation: wiggle 0.1s alternate;
+    }
+
     &__img {
       border-radius: 1.35rem 1.35rem 0 0;
     }
@@ -83,6 +87,7 @@
   .card {
     max-width: 40rem;
     margin-inline: auto;
+
     &__header {
       border-bottom: 2px solid var(--color-primary);
       padding-bottom: 1rem;
@@ -201,6 +206,10 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     max-width: 32rem;
+
+    &:hover {
+      animation: wiggle 0.1s alternate;
+    }
 
     &__background {
       grid-row: 1;
@@ -407,5 +416,14 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 3rem;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
   }
 }
