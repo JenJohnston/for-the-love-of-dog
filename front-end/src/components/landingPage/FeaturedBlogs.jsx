@@ -50,7 +50,7 @@ export default function FeaturedBlogs() {
             <div className="featuredBlogs__cards">
                 <BlogCards blogs={featuredBlogs} />
             </div>
-            <Link to="/blogs" className='featuredBlogs__link'>
+            <Link to="/blogs" className='featuredBlogs__link' data-aos="zoom-in">
                 <p>Read Our Blogs</p>
                 <IoMdPaw className="featuredBlogs__icon"/>
             </Link>

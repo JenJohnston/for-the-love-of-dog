@@ -9,7 +9,10 @@ import { FaPaw } from 'react-icons/fa'
 export default function BlogCard({title, path, image, publishedOn, categories, excerpt}) {
 
     return (
-        <aside className='card'>
+        <aside className='card' 
+               data-aos="flip-left" 
+               data-aos-easing="linear"
+               data-aos-duration="900">
            <GatsbyImage
                 className='card__img'
                 image={image.imageData}

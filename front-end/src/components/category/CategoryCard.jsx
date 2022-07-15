@@ -8,7 +8,10 @@ export default function CategoryCard({title, description, slug, image}) {
     
 
     return (
-        <aside className='card'>
+        <aside className='card'
+               data-aos="fade-up"
+               data-aos-duration="2000"
+        >
             <div className="card__background">
                 <GatsbyImage
                     className='card__img'

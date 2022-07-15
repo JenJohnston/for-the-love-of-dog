@@ -13,7 +13,7 @@ export default function ServicesSection() {
                 <p>For Your Cutest Family Member</p>
                 <h2>Our Services</h2>
             </div>
-            <div className="services__card">
+            <div className="services__card" data-aos="fade-left">
                 <div className="img__container">
                     <StaticImage
                             className='services__img'
@@ -27,7 +27,7 @@ export default function ServicesSection() {
                     <p>By using modern methods in behavioural modification and the latest in scientific research, we are here to help train you're most adorable member of the family.</p>
                 </div>
             </div>
-            <Link to="/services" className='services__link'>
+            <Link to="/services" className='services__link' data-aos="zoom-in">
                 <IoMdPaw className="services__icon"/>
                 <p>See Our Services</p>
             </Link>

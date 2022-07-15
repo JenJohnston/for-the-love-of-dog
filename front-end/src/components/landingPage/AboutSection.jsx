@@ -13,7 +13,7 @@ export default function AboutSection() {
                 <p>Well Hello...</p>
                 <h2>Welcome</h2>
             </div>
-            <div className="about__card">
+            <div className="about__card" data-aos="fade-right">
                 <div className="img__container">
                     <StaticImage
                             className='about__img'
@@ -27,7 +27,7 @@ export default function AboutSection() {
                     <p>By using modern methods in behavioural modification and the latest in scientific research, we are here to help train you're most adorable member of the family.</p>
                 </div>
             </div>
-            <Link to="/about" className='about__link'>
+            <Link to="/about" className='about__link' data-aos="zoom-in">
                 <p>Find Out More</p>
                 <IoMdPaw className="about__icon"/>
             </Link>

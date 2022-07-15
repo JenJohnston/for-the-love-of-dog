@@ -40,7 +40,7 @@ export default function TopCategories() {
             <div className="topCategories__cards">
                 <CategoryCards categories={topCategories}/>
             </div>
-            <Link to="/categories" className='topCategories__link'>
+            <Link to="/categories" className='topCategories__link' data-aos="zoom-in">
                 <IoMdPaw className="topCategories__icon"/>
                 <p>View Our Categories</p>
             </Link>
