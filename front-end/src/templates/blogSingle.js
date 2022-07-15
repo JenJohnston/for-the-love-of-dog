@@ -102,7 +102,7 @@ export default function BlogsSingle({ data }) {
           </article>
           <Link to='/blogs' className='blog__link'>
             <p>Return to Blogs</p>
-            <IoMdPaw className='blog__icon' />
+            <IoMdPaw className='blog__pawIcon' />
           </Link>
         </div>
       </section>
