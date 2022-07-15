@@ -27,14 +27,18 @@
       backdrop-filter: blur(5px);
       background-color: var(--color-primary-ol);
       padding: 2rem;
-      width: 40rem;
+      width: 100%;
       height: fit-content;
       position: absolute;
-      inset: 0 0 4rem 10rem;
-      transform: translateX(100%);
-      transition: all 0.6s ease-in-out;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      transition: all 1s ease-in-out;
       z-index: 100;
       overflow: hidden;
+      border-radius: 0 0 0 2rem;
+      display: none;
+      opacity: 0;
 
       .navmenu {
         z-index: 110;
@@ -46,8 +50,12 @@
         .searchIcon {
           font-size: 2.35rem;
           margin-inline: auto;
-          color: var(--color-primary);
+          color: var(--background-color);
           cursor: pointer;
+
+          @include u.breakpoint-min(lg) {
+            color: var(--color-primary);
+          }
         }
 
         .nav__item {
@@ -87,11 +95,8 @@
     }
 
     .shownav {
-      transform: translateX(-30%);
-
-      @include u.breakpoint-min(med) {
-        transform: translateX(0%);
-      }
+      display: block;
+      opacity: 1;
     }
   }
 
@@ -143,6 +148,11 @@
           width: 1.65rem;
           height: 1.65rem;
           transition: all 0.3s ease-in-out;
+          color: var(--background-color);
+
+          @include u.breakpoint-min(lg) {
+            color: var(--color-primary);
+          }
 
           &:hover {
             color: var(--background-secondary);
