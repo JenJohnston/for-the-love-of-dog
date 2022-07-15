@@ -142,4 +142,11 @@
       font-family: var(--secondary-font-stack);
     }
   }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    transform: rotate(-45deg);
+    opacity: 0.3;
+  }
 }
