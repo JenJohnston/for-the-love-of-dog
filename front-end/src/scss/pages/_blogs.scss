@@ -14,6 +14,10 @@
 
     .hero_rectangle {
       height: 50vh;
+
+      @include u.breakpoint-min(med) {
+        height: 80vh;
+      }
     }
   }
 
