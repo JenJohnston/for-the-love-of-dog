@@ -18,6 +18,10 @@
       @include u.breakpoint-min(med) {
         height: 110vh;
       }
+
+      @include u.breakpoint-min(xl) {
+        height: 55vh;
+      }
     }
   }
 
@@ -70,5 +74,28 @@
       text-align: center;
       padding-bottom: 1rem;
     }
+  }
+
+  &__link {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+    bottom: 1%;
+
+    p {
+      font-size: var(--step-1);
+      margin-right: -3rem;
+      margin-top: 1rem;
+      font-family: var(--secondary-font-stack);
+    }
+  }
+
+  &__pawIcon {
+    width: 4rem;
+    height: 4rem;
+    transform: rotate(-45deg);
+    opacity: 0.3;
   }
 }

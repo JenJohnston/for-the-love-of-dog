@@ -18,6 +18,10 @@
       @include u.breakpoint-min(med) {
         height: 110vh;
       }
+
+      @include u.breakpoint-min(xl) {
+        height: 55vh;
+      }
     }
   }
 

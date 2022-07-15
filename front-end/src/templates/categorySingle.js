@@ -83,11 +83,11 @@ export default function CategorySingle({ data }) {
         </div>
         <div className='featuredBlogs__cards container'>
           <BlogCards blogs={blogs} />
+          <Link to='/categories' className='category__link'>
+            <p>Return to Categories</p>
+            <IoMdPaw className='category__pawIcon' />
+          </Link>
         </div>
-        <Link to='/categories' className='blog__link'>
-          <p>Return to Categories</p>
-          <IoMdPaw className='blog__pawIcon' />
-        </Link>
       </section>
     </>
   );
