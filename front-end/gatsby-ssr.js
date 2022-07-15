@@ -8,7 +8,7 @@ export const wrapPageElement = ({ element, props }) => (
 
  
   <Layout {...props}>
-    {AOS>init()}
+    {AOS.init()}
     {element}
   </Layout>
 );
