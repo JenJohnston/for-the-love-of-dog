@@ -1,11 +1,14 @@
 import "./src/scss/index.scss";
-import AOS from 'aos';
+import AOS, { init } from 'aos';
 import 'aos/dist/aos.css'; 
 import React from "react";
 import Layout from "./src/components/Layout";
 
 export const wrapPageElement = ({ element, props }) => (
 
-  AOS.init(),
-  <Layout {...props}>{element}</Layout>
+ 
+  <Layout {...props}>
+    {AOS>init()}
+    {element}
+  </Layout>
 );
