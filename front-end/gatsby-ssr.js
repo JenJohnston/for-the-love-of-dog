@@ -5,7 +5,7 @@ import React, {useEffect} from "react";
 import Layout from "./src/components/Layout";
 
 if (typeof document !== `undefined`){
-  AOS.init();
+  
 }
 
 export const wrapPageElement = ({ element, props }) => (
