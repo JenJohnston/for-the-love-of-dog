@@ -19,6 +19,10 @@
         height: 110vh;
       }
 
+      @include u.breakpoint-min(lg) {
+        height: 45vh;
+      }
+
       @include u.breakpoint-min(xl) {
         height: 55vh;
       }
