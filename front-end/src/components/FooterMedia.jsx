@@ -12,7 +12,7 @@ export default function FooterMedia() {
 
     return (
         <div className='media__links'>
-            <a to="https://www.facebook.com/fortheloveofdogCA">
+            <a href="https://www.facebook.com/fortheloveofdogCA">
                 <FaFacebook className='media__link'/>
             </a>
             <Link to="/">
