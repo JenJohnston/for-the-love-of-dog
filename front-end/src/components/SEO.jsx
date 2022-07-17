@@ -17,8 +17,6 @@ export default function Seo({title, description, keywords, author}) {
         }
     `)
 
-    console.log(site)
-
     const seo = {
         title: title
         ? `${site.siteMetadata.title} | ${title}`
