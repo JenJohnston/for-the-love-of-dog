@@ -6,7 +6,9 @@ module.exports = {
   siteMetadata: {
     title: `For The Love Of Dog`,
     siteUrl: `https://www.yourdomain.tld`,
-    description: `site description goes here`,
+    description: `homepage for Edmonton based Dog Groomer For The Love Of Dog`,
+    author: `https://jennifer-johnston.netlify.app/`,
+    keywords: `Dog's, Dog Groomer, Dog Groomer in Edmonton, Pet Training, Dog Training, Dog Groomer Near Me, Dog Wash, Puppy Wash, Puppy Training, Puppy Cut`,
   },
   plugins: [
     `gatsby-plugin-image`,

@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
             <div className="footer__content container">
                 <div className="footer__logoContainer">
-                        <Link to='/' className='footer__link'>
+                        <Link to='/index' className='footer__link'>
                             <StaticImage
                                 className='footer__logo'
                                 src="../images/fttd-logo-dk.png"
