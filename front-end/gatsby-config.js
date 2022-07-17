@@ -148,12 +148,8 @@ module.exports = {
       options: {
         host: `https://for-the-love-of-dog.vercel.app/`,
         sitemap: `https://for-the-love-of-dog.vercel.app/sitemap/sitemap-index.xml`,
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          production: {
-            policy: [{userAgent: '*', allow: '/'}]
-          }
-        }
+        policy: [{userAgent: '*', allow: '/'}],
+
       },
     },
   ],
