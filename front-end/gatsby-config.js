@@ -150,9 +150,6 @@ module.exports = {
         sitemap: `https://for-the-love-of-dog.vercel.app/sitemap/sitemap-index.xml`,
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
-          development: {
-            policy: [{userAgent: '*', disallow: ['/']}]
-          },
           production: {
             policy: [{userAgent: '*', allow: '/'}]
           }
