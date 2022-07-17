@@ -33,6 +33,7 @@ export default function Seo({title, description, keywords, author}) {
            <meta name="description" content={seo.description} />
            <meta name="keywords" content={seo.keywords} />
            <meta name="author" content={seo.author} />
+           <meta name="google-site-verification" content="3tk9f2PTIeG__vN8qBbud3KJb3ayX57C8aDeKjYnGsA" />
         </Helmet>
     )
 }
