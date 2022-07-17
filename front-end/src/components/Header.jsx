@@ -40,7 +40,7 @@ export default function Header() {
         <header className='header'>
             <div className="container">
                 <div className="header__logoContainer">
-                    <Link to='/index' className='header__link'>
+                    <Link to='/' className='header__link'>
                         <StaticImage
                             className='header__logo'
                             src="../images/fttd-logo-dk.png"

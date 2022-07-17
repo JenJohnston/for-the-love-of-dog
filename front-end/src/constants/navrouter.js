@@ -2,7 +2,7 @@ export const navRouter = [
     {
         id: '00',
         title: 'Home',
-        path: '/index'
+        path: '/'
     },
     {
         id: '01',
