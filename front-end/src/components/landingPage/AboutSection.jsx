@@ -23,8 +23,9 @@ export default function AboutSection() {
                     />
                 </div>
                 <div className="about__content">
-                    <p>Welcome to For The Love of Dog where we help you and your dog to thrive in an environment of empathy, love and kindness.</p>
-                    <p>By using modern methods in behavioural modification and the latest in scientific research, we are here to help train you're most adorable member of the family.</p>
+                    <p>Welcome to For The Love of Dog a premier dog grooming spa and training studio based in Edmonton, Alberta where we offer a wide range of services to help you care for your beloved family member</p>
+
+                    <p>With over 20 years of experience in dog grooming, dog training and with a strong educational background, we use the latest modern methods in dog behaviour, psychology and ethical care as part of our core philosophy.</p>
                 </div>
             </div>
             <Link to="/about" className='about__link' data-aos="zoom-in">
