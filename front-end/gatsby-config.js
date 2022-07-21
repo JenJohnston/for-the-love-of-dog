@@ -148,7 +148,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: `https://for-the-love-of-dog.vercel.app/`,
-        sitemap: `https://for-the-love-of-dog.vercel.app/sitemap/sitemap-index.xml`,
+        sitemap: `https://for-the-love-of-dog.vercel.app/sitemap/sitemap-0.xml`,
         policy: [{userAgent: '*', allow: '/'}],
 
       },
