@@ -1,6 +1,7 @@
 require("dotenv").config("./.env");
 
 const sanityConfig = require("./sanity-config");
+const siteUrl = process.env.URL || `https://fallback.net`
 
 module.exports = {
   siteMetadata: {
