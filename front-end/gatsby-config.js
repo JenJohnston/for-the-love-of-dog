@@ -1,7 +1,7 @@
 require("dotenv").config("./.env");
 
 const sanityConfig = require("./sanity-config");
-const siteUrl = process.env.URL || `https://fallback.net`
+const siteUrl = process.env.URL || `https://for-the-love-of-dog.vercel.app/`
 
 module.exports = {
   siteMetadata: {
@@ -18,6 +18,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-glslify`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+
+    },
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
