@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-glslify`,
+    `gatsby-transformer-gitinfo`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -36,22 +37,39 @@ module.exports = {
               path
             }
           }
+          allFile(filter: {sourceInstanceName: {eq: "pages"}}) {
+            edges {
+              node {
+                fields {
+                  gitLogLatestDate
+                }
+                name
+              }
+            }
+          }
         }
         `,
         resolveSiteUrl: () => siteUrl,
         resolvePages: ({
           allSitePage: { nodes: allPages},
+          allFile: { edges: pageFiles }
         }) => {
           return allPages.map(page => {
-            return { ...page }
+            const pageFile = pageFiles.find(({ node }) => {
+              const fileName = node.name === 'index' ? '/' : `/${node.name}/`
+              return page.path === fileName
+            })
+
+            return {...page, ...pageFile?.node?.fields}
           })
         },
-        serialize: ({ path, modifiedGmt }) => {
+        serialize: ({ path, gitLogLatestDate }) => {
           return {
             url: path,
-            lastmod: modifiedGmt,
+            lastmod: gitLogLatestDate,
           }
-        }
+        },
+        createLinkInHead: true,
       }
     },
     {

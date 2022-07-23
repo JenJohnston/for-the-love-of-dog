@@ -39,6 +39,7 @@
     "gatsby-plugin-sitemap": "^5.18.1",
     "gatsby-source-filesystem": "^4.16.0",
     "gatsby-source-sanity": "^7.4.2",
+    "gatsby-transformer-gitinfo": "^1.1.0",
     "gatsby-transformer-sharp": "^4.16.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
