@@ -28,7 +28,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: fit-content !important;
+    width: 100%;
+    height: fit-content;
     margin-bottom: var(--space-3xl);
     align-self: flex-start;
     margin-top: 4rem;
